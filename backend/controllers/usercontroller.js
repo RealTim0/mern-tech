@@ -2,12 +2,7 @@ const Note = require('../models/notemodel')
 const User = require('../models/user')
 const bcrypt = require('bcrypt')
 const asyncHandler = require("express-async-handler")
-/* const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
 
-// Parse JSON request bodies
-app.use(bodyParser.json()); */
 ////////////////////////////////////////////////////////////
 const createUser = asyncHandler( async (req, res) =>{
     const { username , password, roles } = req.body

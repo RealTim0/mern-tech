@@ -5,13 +5,15 @@ const PORT= process.env.PORT  || 3500
 const userrouter = require("./routes/userroutes")
 const mongoose = require('mongoose')
 const cors = require('cors')
-const bodyParser = require('body-parser')
+const notesrouter = require('./routes/noteroutes')
 
 mongoose.connect(process.env.MONGO_URI)
 
 app.use(express.json())
 
 app.use('/users', userrouter)
+
+app.use('/notes', notesrouter)
 
 
 
